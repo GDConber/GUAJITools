@@ -1,0 +1,270 @@
+/*
+背景色:#f4f8fb
+主题绿色：#2ed573
+主题浅绿色：#7bed9f
+阴影：
+字体颜色：#2f3e4c
+白：#fff
+*/
+
+:root {
+    --color-background: #f4f8fb;
+    --color-theme:#2ed573;
+    --color-theme-light:#7bed9f;
+    --color-font:#2f3e4c;
+    --color-white:#fff;
+}
+
+body {
+    /*width: 100vw;*/
+    /*overflow: hidden;*/
+    /*背景色*/
+    background-color: var(--color-background);
+    /*color: #2f3e4c;*/
+}
+
+.text {
+    /*标题居中*/
+    text-align: center;
+    /*标题外间距*/
+    padding: 30px 0 30px 0;
+    /*标题颜色*/
+    color: var(--color-font);
+}
+
+.nya-container .nya-title span {
+    /*标签字体大小*/
+    font-size: 1.0625rem;
+    /*标签字体粗细*/
+    line-height: 1.25rem;
+    /*标签字体对齐父类中部*/
+    vertical-align: middle;
+}
+
+.nya-container .nya-title {
+    /*绝对定位*/
+    position: absolute;
+    /*标签向左移动*/
+    left: 1.875rem;
+    /*标签向上移动*/
+    top: -1.125rem;
+    /*标签边距*/
+    padding: .5rem .9375rem;
+    /*标签字体粗细*/
+    font-weight: 700;
+    /*标签字体居中*/
+    font-size: 0;
+    /*标签颜色*/
+    background-color: var(--color-theme);
+    /*标签字体颜色*/
+    color: var(--color-white);
+    /*标签阴影*/
+    box-shadow: 0 0.5rem 0.625rem rgba(36, 253, 144, 0.302);
+    /*标签圆角*/
+    border-radius: .5rem;
+}
+
+/*
+.nya-container .nya-title span {
+    font-size: 1.0625rem;
+    line-height: 1.25rem;
+    vertical-align: middle;
+}
+*/
+
+.switch {
+    
+    /*border:1px dashed black;*/
+    /*浮动布局*/
+    display: flex;
+    /*元素居中*/
+    justify-content: center;
+    /*align-items: center;*/
+    /*设置元素宽度*/
+    width: 800px;
+    /*height: 300px;*/
+    /*自动设置长度*/
+    height: auto;
+    /*元素间距*/
+    padding: 30px 50px 30px 50px;
+    background: var(--color-white);
+    border-radius: .5rem;
+    /*position: absolute;*/
+    /*left: 50%;*/
+    /*top: 50%;*/
+    transform: translate(0%, 0%);
+    margin: 0 auto;
+    /*阴影*/
+    box-shadow: 0.5rem 0.875rem 2.375rem rgba(39, 49, 41, 0.06),
+     0.0625rem 0.1875rem 0.5rem rgba(39, 49, 41,.03);
+    /*间距*/
+    margin-bottom: 30px;
+}
+
+.no2 {
+    justify-content: left;
+}
+
+.s {
+    position: relative;
+    /*
+    display: inline;
+    position: relative;
+    */
+    border-radius: 20px;
+}
+
+.no1 {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.switch a {
+    margin-right: 30px;
+    font-size: 30px;
+    background: var(--color-white);
+}
+
+.s input {
+    display: none;
+}
+
+/*开关*/
+.s1 {
+    width: 68px;
+    height: 40px;
+    background: #ccc;
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.4s;
+    border-radius: 20px;
+}
+
+.s1::before {
+    content: '';
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    left: 4px;
+    top: 4px;
+    background: var(--color-white);
+    border-radius: 50%;
+    transition: 0.4s;
+    border-radius: 20px;
+}
+
+.s input:checked + .s1 {
+    background: var(--color-theme);
+}
+
+.s input:checked + .s1::before {
+    left: 32px;
+}
+
+/*---废弃处---*/
+
+/*自动生成按钮*/
+/*
+.el-button--primary {
+    color: #FFF;
+    background-color: #249FFD;
+    border-color: #249FFD;
+}
+
+.el-button {
+    display: inline-block;
+    line-height: 1;
+    white-space: nowrap;
+    cursor: pointer;
+    background: #249FFD;
+    border: 1px solid #DCDFE6;
+    color: #FFF;
+    -webkit-appearance: none;
+    text-align: center;
+    box-sizing: border-box;
+    outline: 0;
+    margin: 0;
+    -webkit-transition: .1s;
+    transition: .1s;
+    font-weight: 500;
+    padding: 12px 50px;
+    font-size: 14px;
+    border-radius: 4px;
+
+    position: absolute;
+    bottom: 20px;
+}
+
+button, input {
+    overflow: visible;
+}
+
+button, select {
+    text-transform: none;
+}
+
+*/
+
+.nya-container .nya-list {
+    margin: 0;
+}
+.nya-list {
+    margin-left: 0;
+    padding-left: .625rem;
+    list-style: none;
+}
+
+.nya-list li {
+    margin: .625rem 0;
+    line-height: 1.3;
+    list-style: none;
+}
+
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+.nya-list li:before {
+    position: relative;
+    left: -.5rem;
+    content: "";
+    display: inline-block;
+    border-radius: 50%;
+    width: .375rem;
+    height: .375rem;
+    background-color: var(--color-theme);
+    border: .1875rem solid var(--color-theme-light);
+}
+
+li {
+    display: list-item;
+    text-align: var(--color-theme);
+}
+
+/*版权*/
+.c{
+    position:fixed;
+    bottom:0;
+    width: 100%;
+    text-align: center;
+    font-family: Arial;
+    font-size: 12px;
+    letter-spacing: 1px;
+    padding: 10px 10px;
+}
+
+.c a{
+    text-decoration: none;
+    color: var(--color-font);
+}
+
+body cc{
+    height: 100%;
+}
